@@ -85,6 +85,21 @@ fieldset  {
   border: 1px solid var(--cor-borda);
 }
 
+#menu-toggle {
+  display: none;
+}
+
+.menu-links {
+  display: none;
+}
+
+#menu-toggle:checked ~ .menu-links{  
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-1);
+  width: 100%;
+}
+
 @media (min-width: 576px) {
 footer {
         display: grid;
@@ -101,6 +116,15 @@ footer {
 
     main {
         grid-column: span 9;
+  }
+    nav label {
+    display: none;
+  }
+
+  .menu-links {
+    display: flex;
+    flex-direction: column;
+    gap: var(--espaco-2);
   }
 }
 
