@@ -18,6 +18,9 @@ header {
 
 nav {
      grid-column: span 12;
+     display: flex;
+     gap: var(--espaco-2);
+     flex-wrap: wrap;
    }
 
 main {
@@ -69,6 +72,7 @@ footer {
 @media (min-width: 768px) {
     nav {
         grid-column: span 3;
+        flex-direction: column;
   }
 
     main {
