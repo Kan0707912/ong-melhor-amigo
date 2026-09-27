@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cadastro | Melhor Amigo</title>
+
+  <link rel="stylesheet" href="../css/variaveis.css">
+  <link rel="stylesheet" href="../css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <p>Melhor Amigo</p>
+        <p>Seu melhor amigo precisa de ajuda</p>
+
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="projetos.html">Projetos</a>
+        <a href="cadastro.html">Cadastro</a>
+    </nav>
+
+    <main>
+        <h1>Cadastro de apoiadores</h1>
+        <p>
+            Preencha seus dados para demonstrar interesse em apoiar a ONG Melhor Amigo.
+        </p>
+
+        <form> 
+            <fieldset> 
+                <legend>Identificação</legend>
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome">
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" pattern="[0-9]{11}">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Contato</legend>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email">
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Localização</legend>
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" inputmode="numeric" pattern="[0-9]{5}[0-9]{3}">
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="">Selecione</option>
+                    <option value="pb">PB</option>
+                    <option value="rn">RN</option>
+                    <option value="pe">PE</option>
+                    <option value="sp">SP</option>
+                    <option value="rj">RJ</option>
+                    <option value="mg">MG</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Forma de colaboração</legend>
+
+                <label>
+                    <input type="radio" name="colaboracao" value="doacao">
+                    Doação
+                </label>
+
+                <label>
+                    <input type="radio" name="colaboracao" value="volutariado">
+                    Trabalho voluntário
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Motivação</legend>
+                <label for="motivacao">Por que deseja apoiar a ONG?</label>
+                <textarea id="motivacao" name="motivacao"></textarea>
+
+            </fieldset>
+
+            <button type="submit">Enviar cadastro</button>
+
+
+        </form>
+    </main>
+
+
+    <footer>
+        <section>
+            <h2>Telefone</h2>
+            <p>(83) 90000-0000</p>
+        </section>
+
+        <section>
+            <h2>E-mail</h2>
+            <p>Melhoramigoong@email.com</p>
+        </section>
+
+        <section>
+            <h2>Endereço</h2>
+            <p>Rua da Paz, 10, Bairro Branco, Cidade Projetada</p>
+        </section>
+        
+    </footer>
+
+
+</body>
+
+</html>

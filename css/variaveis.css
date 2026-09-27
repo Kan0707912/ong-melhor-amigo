@@ -1,0 +1,60 @@
+/* =========================================================
+   DESIGN SYSTEM — ONG Melhor Amigo
+   Arquivo base de variáveis. Reutilizável em outros projetos:
+   troque só os VALORES, mantenha os NOMES.
+
+   Como usar: em cada página, dentro do <head>, ANTES do style.css:
+   <link rel="stylesheet" href="css/variaveis.css">
+   <link rel="stylesheet" href="css/style.css">
+   ========================================================= */
+
+:root {
+
+  /* ---------- 1. CORES (mínimo 8) ----------
+     Preencha com hexadecimais (#rrggbb).
+     Regra de acessibilidade: texto sobre fundo precisa de
+     contraste mínimo 4.5:1 (WCAG AA). Teste em:
+     webaim.org/resources/contrastchecker                     */
+
+  /* Primárias — identidade da ONG (botões, links, destaques) */
+  --cor-primaria: #1574E0;  /* TODO */
+  --cor-primaria-escura:   #052242;  /* TODO: hover/foco da primária */
+
+  /* Secundárias — apoio e chamadas para ação */
+  --cor-secundaria:  #0f766e;  /* TODO */
+  --cor-destaque:    #b45309;  /* TODO: ex. botão "Doar" */
+
+  /* Neutras — texto, fundos e bordas */
+  --cor-texto:    #040138;  /* TODO: quase preto */
+  --cor-texto-suave:  #4b5563;  /* TODO: textos secundários */
+  --cor-fundo:    #e2ecec;  /* TODO: fundo da página */
+  --cor-superficie: #a9dba2;  /* TODO: fundo de cartões/seções */
+  --cor-borda:      #6b7280;  /* TODO */
+
+  /* Feedback — mensagens de formulário */
+  --cor-sucesso:    #037209;  /* TODO */
+  --cor-erro:       #aa0505;  /* TODO */
+
+
+  /* ---------- 2. TIPOGRAFIA (mínimo 5 níveis) ----------
+     Use rem (1rem = 16px por padrão). Pense: qual elemento
+     do SEU HTML usa cada nível?                               */
+
+  --fonte-base:   system-ui, "Segoe UI", Roboto, sans-serif;  /* TODO: família da fonte */
+
+  --texto-sm:        0.8rem;  /* TODO: ex. rodapé */
+  --texto-base:        1rem;  /* TODO: parágrafos */
+  --texto-lg:       1.25rem;  /* TODO: h2 */
+  --texto-xl:       1.56rem;  /* TODO: h1 */
+  --texto-2xl:      1.95rem;  /* TODO: ex. cabeçaho */
+
+
+  /* ---------- 3. ESPAÇAMENTOS (escala modular) ----------
+     Escolha UMA regra e siga à risca (ex.: múltiplos de 8px).  */
+
+  --espaco-1:              0.5rem;  /* TODO */
+  --espaco-2:              1rem;  /* TODO */
+  --espaco-3:              1.5rem;  /* TODO */
+  --espaco-4:              2rem;  /* TODO */
+  --espaco-5:              3rem;  /* TODO */
+}
