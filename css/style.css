@@ -61,6 +61,26 @@ button:hover {
      background-color: var(--cor-primaria-escura);
    }
 
+
+fieldset  {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espaco-1);
+
+}
+
+.cartoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espaco-3);
+}
+
+.cartoes section {
+  flex: 1 1 250px;
+  padding: var(--espaco-3);
+  border: 1px solid var(--cor-borda);
+}
+
 @media (min-width: 576px) {
 footer {
         display: grid;
