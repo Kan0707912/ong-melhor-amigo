@@ -33,7 +33,12 @@ main {
 
 a {
   color: var(--cor-primaria-escura);
+  transition: color 0.3s;
     }
+
+a:hover {
+  color: var(--cor-secundaria);
+}
 
 h2 {
   color: var(--cor-secundaria);
