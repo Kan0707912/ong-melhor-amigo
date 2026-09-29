@@ -20,22 +20,26 @@
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle">☰ Menu</label>
 
-        <div class="menu-links">
-            <a href="index.html">Início</a>
-            <div class="dropdown">
-                <a href="projetos.html">Projetos</a>
-                <div class="submenu">
-                    <a href="projetos.html#resgate">Resgate</a>
-                    <a href="projetos.html#transformacao">Transformação</a>
-                    <a href="projetos.html#adocao">Adoção responsável</a>
-                </div>
+    <div class="menu-links">
+        <a href="#inicio">Início</a>
+        <div class="dropdown">
+            <a href="#projetos">Projetos</a>
+            <div class="submenu">
+                <a href="#projetos">Resgate</a>
+                <a href="#projetos">Transformação</a>
+                <a href="#projetos">Adoção responsável</a>
             </div>
-            <a href="cadastro.html">Cadastro</a>
-        </div>
+    </div>
+
+    <a href="#cadastro">Cadastro</a>
+
+</div>
     </nav>
 
-    <main>
-     <img src="../imagens/caes01.jpeg" alt="Cães resgatados pela ONG Melhor Amigo">
+    <main id="app">
+        </main>
+        <template id="pagina-inicio">
+        <img src="../imagens/caes01.jpeg" alt="Cães resgatados pela ONG Melhor Amigo">
     <section>
         <h2>Quem somos</h2>
         <p>Há muitos cães abandonados nas ruas à espera de uma família acolhedora. Sensibilizados por essa realidade, um grupo de pessoas uniu esforços e fundou a ONG Melhor Amigo, uma entidade dedicada ao resgate, cuidado e encaminhamento desses companheiros de quatro patas para novos lares.
@@ -64,7 +68,134 @@ Junte-se a nós e faça a diferença na vida de quem mais precisa.</p>
         </section>
     
 
-    </main>
+    </template>
+
+    <template id="pagina-projetos">
+        <h1>Projetos da ONG Melhor Amigo</h1>
+            <div class="cartoes">
+            <section id="resgate">
+                <h2>Resgate</h2>
+                <span class="badge badge-urgente">Urgente</span>
+                <p>
+                    A ONG atua no resgate de cães que vivem em situação de abandono, vulnerabilidade ou sofrimento. Após serem acolhidos, os animais recebem proteção imediata, alimentação adequada e os cuidados necessários para iniciar sua recuperação física e emocional.
+                </p>
+            </section>
+
+            <section id="transformacao">
+                <h2>Transformação</h2>
+                <span class="badge badge-ativo">Em andamento</span>
+                <p>
+                    Cada cão passa por um processo de reabilitação e preparação para a adoção. Durante essa etapa, recebe acompanhamento de saúde, cuidados de higiene, alimentação de qualidade e treinamento comportamental, desenvolvendo confiança e habilidades para uma convivência harmoniosa em família.
+                </p>
+            </section>
+
+            <section id="adocao">
+                <h2>Adoção responsável</h2>
+                <span class="badge badge-sucesso">+600 adoções</span>
+                <p>
+                    Ao final dessa jornada, os cães são encaminhados para famílias cuidadosamente selecionadas e comprometidas com seu bem-estar. A adoção responsável garante que cada animal encontre um lar seguro, repleto de carinho, atenção e cuidados por toda a vida, proporcionando um recomeço feliz para cães e tutores.
+                </p>
+            </section>
+            </div>
+
+</template>
+
+<template id="pagina-cadastro">
+     <h1>Cadastro de apoiadores</h1>
+        <p>
+            Preencha seus dados para demonstrar interesse em apoiar a ONG Melhor Amigo.
+        </p>
+
+<div class="alerta alerta-sucesso" role="alert">
+    Cadastro enviado com sucesso! Obrigado por apoiar a ONG Melhor Amigo.
+</div>
+
+<div class="alerta alerta-erro" role="alert">
+    Verifique os campos em vermelho antes de enviar.
+</div>
+
+<a href="#modal-info">Como funciona o cadastro?</a>
+
+        <form> 
+            <fieldset> 
+                <legend>Identificação</legend>
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" pattern="[0-9]{11}">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Contato</legend>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" pattern="[0-9]{2}[0-9]{5}[0-9]{4}">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Localização</legend>
+
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" inputmode="numeric" pattern="[0-9]{5}[0-9]{3}">
+
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade">
+
+                <label for="estado">Estado:</label>
+                <select id="estado" name="estado">
+                    <option value="">Selecione</option>
+                    <option value="pb">PB</option>
+                    <option value="rn">RN</option>
+                    <option value="pe">PE</option>
+                    <option value="sp">SP</option>
+                    <option value="rj">RJ</option>
+                    <option value="mg">MG</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Forma de colaboração</legend>
+
+                <label>
+                    <input type="radio" name="colaboracao" value="doacao">
+                    Doação
+                </label>
+
+                <label>
+                    <input type="radio" name="colaboracao" value="volutariado">
+                    Trabalho voluntário
+                </label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Motivação</legend>
+                <label for="motivacao">Por que deseja apoiar a ONG?</label>
+                <textarea id="motivacao" name="motivacao"></textarea>
+
+            </fieldset>
+
+            <button type="submit">Enviar cadastro</button>
+
+
+        </form>
+
+<div id="modal-info" class="modal" role="dialog" aria-labelledby="modal-titulo">
+    <div class="modal-conteudo">
+        <h2 id="modal-titulo">Como funciona o cadastro</h2>
+        <p>Após o envio, nossa equipe entrará em contato em até 3 dias úteis para combinar a melhor forma de você colaborar.</p>
+        <a href="#cadastro">Fechar</a>
+    </div>
+</div>
+
+</template>
 
     <footer>
         <section>
