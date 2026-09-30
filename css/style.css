@@ -259,3 +259,17 @@ footer {
     }
 }
 
+input.campo-erro {
+    border: 2px solid var(--cor-erro);
+    background-color: #fdecec;
+}
+
+input.campo-ok {
+    border: 2px solid var(--cor-sucesso);
+}
+
+.mensagem-erro {
+    color: var(--cor-erro);
+    font-size: var(--texto-sm);
+}
+
