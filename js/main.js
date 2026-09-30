@@ -50,3 +50,35 @@ function renderizar() {
 
 window.addEventListener('hashchange', renderizar);
 renderizar();
+
+document.addEventListener('submit', function (evento) {
+    if (evento.target.id !== 'form-cadastro') return;
+    evento.preventDefault();
+
+    const form = evento.target;
+    const sucesso = document.getElementById('alerta-sucesso');
+    const erro = document.getElementById('alerta-erro');
+
+    if (form.checkValidity()) {
+        sucesso.hidden = false;
+        erro.hidden = true;
+        form.reset();
+    } else {
+        erro.hidden = false;
+        sucesso.hidden = true;
+        form.reportValidity();
+    }
+});
+
+document.addEventListener('input', function (evento) {
+    if (!evento.target.closest('#form-cadastro')) return;
+
+    document.getElementById('alerta-sucesso').hidden = true;
+    document.getElementById('alerta-erro').hidden = true;
+});
+
+document.addEventListener('click', function (evento) {
+    if (!evento.target.closest('.menu-links a')) return;
+
+    document.getElementById('menu-toggle').checked = false;
+});

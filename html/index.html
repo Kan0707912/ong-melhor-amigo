@@ -83,17 +83,17 @@ Junte-se a nós e faça a diferença na vida de quem mais precisa.</p>
             Preencha seus dados para demonstrar interesse em apoiar a ONG Melhor Amigo.
         </p>
 
-<div class="alerta alerta-sucesso" role="alert">
+<div class="alerta alerta-sucesso" role="alert" id="alerta-sucesso" hidden>
     Cadastro enviado com sucesso! Obrigado por apoiar a ONG Melhor Amigo.
 </div>
 
-<div class="alerta alerta-erro" role="alert">
+<div class="alerta alerta-erro" role="alert" id="alerta-erro" hidden>
     Verifique os campos em vermelho antes de enviar.
 </div>
 
 <a href="#modal-info">Como funciona o cadastro?</a>
 
-        <form> 
+        <form id="form-cadastro" novalidate> 
             <fieldset> 
                 <legend>Identificação</legend>
                 <label for="nome">Nome completo:</label>
