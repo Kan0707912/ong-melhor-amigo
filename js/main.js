@@ -47,6 +47,7 @@ function renderizar() {
     app.appendChild(template.content.cloneNode(true));
     renderizarProjetos();
     restaurarRascunho();
+    aplicarMascaras();
 }
 
 window.addEventListener('hashchange', renderizar);
@@ -108,6 +109,22 @@ function restaurarRascunho() {
     for (const nome in dados) {
         if (form.elements[nome]) form.elements[nome].value = dados[nome];
     }
+}
+
+function aplicarMascaras() {
+    if (typeof IMask === 'undefined') return;
+
+    const cpf = document.getElementById('cpf');
+    if (!cpf) return;
+
+    IMask(cpf, { mask: '000.000.000-00' });
+    IMask(document.getElementById('cep'), { mask: '00000-000' });
+    IMask(document.getElementById('telefone'), {
+        mask: [
+            { mask: '(00) 0000-0000' },
+            { mask: '(00) 00000-0000' }
+        ]
+    });
 }
 
 document.addEventListener('submit', function (evento) {
