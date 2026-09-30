@@ -93,6 +93,7 @@ function validarCampo(campo) {
 
 function salvarRascunho(form) {
     const dados = Object.fromEntries(new FormData(form));
+    delete dados.cpf;
     localStorage.setItem('rascunho-cadastro', JSON.stringify(dados));
 }
 
