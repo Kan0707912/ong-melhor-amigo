@@ -46,6 +46,7 @@ function renderizar() {
     app.innerHTML = '';
     app.appendChild(template.content.cloneNode(true));
     renderizarProjetos();
+    restaurarRascunho();
 }
 
 window.addEventListener('hashchange', renderizar);
@@ -90,6 +91,24 @@ function validarCampo(campo) {
     return valido;
 }
 
+function salvarRascunho(form) {
+    const dados = Object.fromEntries(new FormData(form));
+    localStorage.setItem('rascunho-cadastro', JSON.stringify(dados));
+}
+
+function restaurarRascunho() {
+    const form = document.getElementById('form-cadastro');
+    if (!form) return;
+
+    const texto = localStorage.getItem('rascunho-cadastro');
+    if (!texto) return;
+
+    const dados = JSON.parse(texto);
+    for (const nome in dados) {
+        if (form.elements[nome]) form.elements[nome].value = dados[nome];
+    }
+}
+
 document.addEventListener('submit', function (evento) {
     if (evento.target.id !== 'form-cadastro') return;
     evento.preventDefault();
@@ -107,6 +126,7 @@ document.addEventListener('submit', function (evento) {
     if (formValido) {
         sucesso.hidden = false;
         erro.hidden = true;
+        localStorage.removeItem('rascunho-cadastro');
         form.reset();
         form.querySelectorAll('.campo-ok').forEach(function (c) {
             c.classList.remove('campo-ok');
@@ -120,6 +140,7 @@ document.addEventListener('submit', function (evento) {
 
 document.addEventListener('focusout', function (evento) {
     if (!evento.target.closest('#form-cadastro')) return;
+    salvarRascunho(evento.target.closest('#form-cadastro'));
     validarCampo(evento.target);
 });
 
