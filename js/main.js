@@ -1,9 +1,13 @@
 function renderizar() {
     const rota = location.hash.replace('#', '') || 'inicio';
     const template = document.getElementById('pagina-' + rota);
-    if (!template) return;
-
     const app = document.getElementById('app');
+
+    if (!template) {
+        if (app.children.length === 0) location.hash = '#inicio';
+        return;
+    }
+
     app.innerHTML = '';
     app.appendChild(template.content.cloneNode(true));
 
