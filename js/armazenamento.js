@@ -22,3 +22,12 @@ function restaurarRascunho() {
 function limparRascunho() {
     localStorage.removeItem(CHAVE_RASCUNHO);
 }
+
+function salvarContraste(ativo) {
+    localStorage.setItem('alto-contraste', ativo ? 'sim' : 'nao');
+}
+
+function lerContraste() {
+    return localStorage.getItem('alto-contraste') === 'sim';
+}
+
