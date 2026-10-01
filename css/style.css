@@ -273,3 +273,136 @@ input.campo-ok {
     font-size: var(--texto-sm);
 }
 
+/* ===== Acessibilidade ===== */
+
+/* Link "pular para o conteúdo": escondido fora da tela, aparece ao receber foco */
+.pular-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background-color: var(--cor-primaria-escura);
+    color: #FFFFFF;
+    padding: var(--espaco-1) var(--espaco-2);
+}
+
+.pular-link:focus {
+    left: var(--espaco-2);
+}
+
+/* Foco sempre visível para quem navega com o teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+/* Menu do celular acessível pelo teclado: o checkbox fica invisível, mas pode receber foco */
+#menu-toggle {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+#menu-toggle:focus-visible + label {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    .dropdown:focus-within .submenu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+/* ===== Acessibilidade ===== */
+
+/* Link "pular para o conteúdo": escondido fora da tela, aparece ao receber foco */
+.pular-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background-color: var(--cor-primaria-escura);
+    color: #FFFFFF;
+    padding: var(--espaco-1) var(--espaco-2);
+}
+
+.pular-link:focus {
+    left: var(--espaco-2);
+}
+
+/* Foco sempre visível para quem navega com o teclado */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+/* Menu do celular acessível pelo teclado: o checkbox fica invisível, mas pode receber foco */
+#menu-toggle {
+    display: block;
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+#menu-toggle:focus-visible + label {
+    outline: 3px solid var(--cor-destaque);
+    outline-offset: 2px;
+}
+
+@media (min-width: 768px) {
+    #menu-toggle {
+        display: none;
+    }
+
+    /* Submenu abre também com o teclado, não só com o mouse */
+    .dropdown:focus-within .submenu {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Modo de alto contraste: redefine as variáveis do design system */
+body.alto-contraste {
+    --cor-fundo: #000000;
+    --cor-texto: #FFFFFF;
+    --cor-superficie: #000000;
+    --cor-primaria: #000000;
+    --cor-primaria-escura: #FFFF00;
+    --cor-secundaria: #FFFF00;
+    --cor-borda: #FFFFFF;
+}
+
+body.alto-contraste button {
+    border: 2px solid #FFFFFF;
+}
+
+body.alto-contraste footer,
+body.alto-contraste .alerta,
+body.alto-contraste .modal-conteudo {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: 2px solid #FFFFFF;
+}
+
+/* Respeita quem configurou o sistema para reduzir animações */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+    }
+}

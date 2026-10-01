@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ONG Melhor Amigo | Adoção responsável de cães</title>
     <link rel="stylesheet" href="../css/variaveis.css">
     <link rel="stylesheet" href="../css/style.css">
-    
+
     <script src="https://cdn.jsdelivr.net/npm/imask@7/dist/imask.min.js" defer></script>
     <script src="../js/dados.js" defer></script>
     <script src="../js/projetos.js" defer></script>
     <script src="../js/armazenamento.js" defer></script>
+    <script src="../js/acessibilidade.js" defer></script>
     <script src="../js/formulario.js" defer></script>
     <script src="../js/main.js" defer></script>
-    
-     
 </head>
 <body>
+    
+    <a href="#app" class="pular-link">Pular para o conteúdo</a>
     <header>
         <h1>Melhor Amigo</h1>
         <p>Seu melhor amigo precisa de ajuda</p>
+        <button type="button" id="botao-contraste" aria-pressed="false">Alto contraste</button>
 
     </header>
 
-    <nav>
+    <nav aria-label="Menu principal">
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle">☰ Menu</label>
 
@@ -43,7 +45,7 @@
 </div>
     </nav>
 
-    <main id="app">
+    <main id="app" tabindex="-1">
         </main>
         <template id="pagina-inicio">
         <img src="../imagens/caes01.jpeg" alt="Cães resgatados pela ONG Melhor Amigo">
