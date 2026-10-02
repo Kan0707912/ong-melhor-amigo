@@ -30,9 +30,12 @@ function validarCampo(campo) {
         aviso = document.createElement('small');
         aviso.id = 'erro-' + campo.id;
         aviso.className = 'mensagem-erro';
+        aviso.setAttribute('aria-live', 'polite');
         campo.insertAdjacentElement('afterend', aviso);
+        campo.setAttribute('aria-describedby', aviso.id);
     }
     aviso.textContent = valido ? '' : regra.mensagem;
+    campo.setAttribute('aria-invalid', !valido);
 
     return valido;
 }
