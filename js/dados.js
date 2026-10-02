@@ -4,6 +4,8 @@ const projetos = [
         titulo: 'Resgate',
         badge: 'Urgente',
         tipoBadge: 'badge-urgente',
+        imagem: '../imagens/resgate.svg',
+        alt: 'Ilustração de um cão resgatado acolhido em uma caminha',
         texto: 'A ONG atua no resgate de cães que vivem em situação de abandono, vulnerabilidade ou sofrimento. Após serem acolhidos, os animais recebem proteção imediata, alimentação adequada e os cuidados necessários para iniciar sua recuperação física e emocional.'
     },
     {
@@ -11,6 +13,8 @@ const projetos = [
         titulo: 'Transformação',
         badge: 'Em andamento',
         tipoBadge: 'badge-ativo',
+        imagem: '../imagens/transformacao.svg',
+        alt: 'Ilustração de um cão recebendo cuidados de saúde e alimentação',
         texto: 'Cada cão passa por um processo de reabilitação e preparação para a adoção. Durante essa etapa, recebe acompanhamento de saúde, cuidados de higiene, alimentação de qualidade e treinamento comportamental, desenvolvendo confiança e habilidades para uma convivência harmoniosa em família.'
     },
     {
@@ -18,6 +22,8 @@ const projetos = [
         titulo: 'Adoção responsável',
         badge: '+600 adoções',
         tipoBadge: 'badge-sucesso',
+        imagem: '../imagens/adocao.svg',
+        alt: 'Ilustração de uma família adotando um cão em frente à nova casa',
         texto: 'Ao final dessa jornada, os cães são encaminhados para famílias cuidadosamente selecionadas e comprometidas com seu bem-estar. A adoção responsável garante que cada animal encontre um lar seguro, repleto de carinho, atenção e cuidados por toda a vida, proporcionando um recomeço feliz para cães e tutores.'
     }
 ];
