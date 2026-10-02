@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>ONG Melhor Amigo | Adoção responsável de cães</title>
     <link rel="stylesheet" href="../css/variaveis.css">
     <link rel="stylesheet" href="../css/style.css">
-    
+
     <script src="https://cdn.jsdelivr.net/npm/imask@7/dist/imask.min.js" defer></script>
     <script src="../js/dados.js" defer></script>
     <script src="../js/projetos.js" defer></script>
     <script src="../js/armazenamento.js" defer></script>
+    <script src="../js/acessibilidade.js" defer></script>
     <script src="../js/formulario.js" defer></script>
     <script src="../js/main.js" defer></script>
-    
-     
 </head>
 <body>
+    
+    <a href="#app" class="pular-link">Pular para o conteúdo</a>
     <header>
         <h1>Melhor Amigo</h1>
         <p>Seu melhor amigo precisa de ajuda</p>
+        <button type="button" id="botao-contraste" aria-pressed="false">Alto contraste</button>
 
     </header>
 
-    <nav>
+    <nav aria-label="Menu principal">
         <input type="checkbox" id="menu-toggle">
         <label for="menu-toggle">☰ Menu</label>
 
@@ -43,10 +45,10 @@
 </div>
     </nav>
 
-    <main id="app">
+    <main id="app" tabindex="-1">
         </main>
         <template id="pagina-inicio">
-        <img src="../imagens/caes01.jpeg" alt="Cães resgatados pela ONG Melhor Amigo">
+        <img src="../imagens/inicio.svg" alt="Ilustração de três cães felizes sob um grande coração" width="720" height="300" class="ilustracao-destaque">
     <section>
         <h2>Quem somos</h2>
         <p>Há muitos cães abandonados nas ruas à espera de uma família acolhedora. Sensibilizados por essa realidade, um grupo de pessoas uniu esforços e fundou a ONG Melhor Amigo, uma entidade dedicada ao resgate, cuidado e encaminhamento desses companheiros de quatro patas para novos lares.
@@ -86,6 +88,7 @@ Junte-se a nós e faça a diferença na vida de quem mais precisa.</p>
 
 <template id="pagina-cadastro">
      <h1>Cadastro de apoiadores</h1>
+     <img src="../imagens/cadastro.svg" alt="Ilustração de uma prancheta de cadastro ao lado de um cão" width="400" height="260" class="ilustracao">
         <p>
             Preencha seus dados para demonstrar interesse em apoiar a ONG Melhor Amigo.
         </p>
