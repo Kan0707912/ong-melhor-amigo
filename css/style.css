@@ -406,3 +406,19 @@ body.alto-contraste .modal-conteudo {
         transition: none !important;
     }
 }
+
+.cartoes img,
+.ilustracao {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+.ilustracao-destaque {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+}
